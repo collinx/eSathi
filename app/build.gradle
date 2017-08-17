@@ -17,7 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+    }
+
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -27,4 +32,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    // api.ai dependencies
+    compile 'ai.api:libai:1.4.8'
+    compile 'ai.api:sdk:2.0.5@aar'
+   compile 'com.google.code.gson:gson:2.3'
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    //compile 'com.google.android.gms:play-services:11.2.0'
 }
